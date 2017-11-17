@@ -1,0 +1,63 @@
+.main03 {
+	height: 780px;
+}
+
+.map {
+	width: 100%;
+	height: 780px;
+	background: url(../images/othersever_background.png);
+}
+/*
+.map_img {
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 1200px;
+}
+
+.map_h2 {
+	text-align: center;
+	margin-top: 15px;
+}*/
+
+.map_text {
+	width: 100%;
+	margin-top: 15px;
+	text-align: center;
+	border-top: dashed 1px #eaeaea;
+	padding-top: 15px;
+}
+
+.map_text p {
+	font-size: 14px;
+	color: green;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.map_text_h103 {
+	margin-top: 10px;
+}
+
+.more {
+	text-align: center;
+	margin-top: 57px;
+}
+
+.more img {
+	width: 16px;
+	height: 16px;
+	margin-bottom: 6px;
+}
+
+.button_more {
+	font-size: 16px;
+	padding: 5px 10px;
+    background-color: transparent;
+    box-shadow: 0 0 0 2px #f36f36 inset!important;
+    color: #f36f36;
+    border-radius: 5px;
+}
+
+/*footer {
+	margin-top: 0px;
+}*/

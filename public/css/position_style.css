@@ -1,0 +1,140 @@
+body {
+	background: url(../images/back03.jpg)-400px -400px;
+}
+
+
+.banner02 img {
+	width: 1200px;
+	height: 420px;
+}
+
+.main1 {
+	overflow: hidden;
+	height: 2350px;
+}
+
+.main1_title {
+	margin-top: 35px;
+	width: 100%;
+	height: 180px;
+	text-align: center;
+}
+
+.main1_title p {
+	margin-top: 5px;
+	font-size: 16px;
+	color: #656e73;
+}
+
+.main1_title .title_p01 {
+	font-size: 24px;
+	color: red;
+	font-weight: 6px;
+}
+
+.main1_title span {
+	font-size: 26px;
+	color: red;
+	font-weight: 10px;
+}
+
+.main1_title .title_p02 {
+	font-size: 30px;
+	color: green;
+	font-weight: 6px;
+}
+
+.video_first {
+	widows: 100%; 
+	height: auto;
+}
+
+.video_first video {
+	display: block;
+	margin:0 auto;
+
+}
+.main1_infro {
+	width: 100%;
+	height: 1140px;
+}
+
+.positiontitle {
+	width: 100%;
+	height: 100px;
+	margin: 15px auto;
+	text-align: center;
+}
+
+.positiontitle img {
+	margin:0 auto;
+
+}
+
+.infro01 {
+	width: 500px;
+	height: 520px;
+	background: #f2f2f2;
+	float: left;
+	margin:25px 50px 25px 50px;
+	box-shadow:2px 2px 3px #aaaaaa;
+}
+
+.infro01 img {
+	width: 500px;
+	height: 380px;
+}
+
+.infro01_h2 {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.infro01_p {
+	margin-left: 20px;
+	margin-top: 10px;
+	padding-right: 20px;
+}
+
+.cats {
+    font-size: 16px;
+    font-weight: 400;
+    height: 15px;
+    overflow: hidden;
+    padding: 9pt 54px 36px 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #f36f36;
+}
+
+.cats img {
+	width: 16px;
+	height: 16px;
+	margin-bottom:5px;
+}
+
+.more {
+	text-align: center;
+	margin-top: 17px;
+}
+
+.more img {
+	width: 16px;
+	height: 16px;
+	margin-bottom: 6px;
+}
+
+.button_more {
+	font-size: 16px;
+	padding: 5px 10px;
+    background-color: transparent;
+    box-shadow: 0 0 0 2px #f36f36 inset!important;
+    color: #f36f36;
+    border-radius: 5px;
+}
+
+footer {
+	margin-top: 0px;
+}

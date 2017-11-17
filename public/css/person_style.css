@@ -1,0 +1,267 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #fff;
+	color: #666；
+	font:12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+	overflow: scroll;/*scroll滚动不进行裁剪*/
+	overflow-x: hidden;/*左右裁剪不显示*/
+}
+img{
+	border: 0;
+	/*vertical-align 属性设置元素的垂直对齐方式*/
+	vertical-align: middle;
+}
+button{
+	cursor: pointer;
+}
+button,input{
+	font-family: Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif；
+}
+a{
+	text-decoration: none;
+}
+header{
+	width:100%;
+	background: #FFF;
+}
+.header_main{
+	height: auto;
+	overflow: hidden;
+}
+.logo{
+	margin-top:10px;
+	margin-left:158px;
+	height:auto;
+	overflow: hidden;
+	float: left;
+}
+.logo img{
+	width: 100px;
+	height: 60px;
+
+}
+.right{
+	float: right;
+	height: auto;
+	overflow: hidden;
+	line-height: 80px;
+	margin-right: 158px;
+}
+.right .cur{
+	background: url(../images/navline.jpg) no-repeat left center;
+	padding-left: 60px;/*padding-left 属性设置元素左内边距（空白）*/
+}
+.button{
+	display: inline-block;
+	border: none;
+	color: #282828;
+	padding: 6px 12px;
+	line-height: 16px;
+	font-style: normal;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 14px;
+}
+.signup{
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #df0031 inset!important;
+	color:#df0031;
+}
+.nav{
+	font-size: 14px;
+	float: right;
+	line-height: 80px;
+	overflow: hidden;
+	margin-right: 60px;
+}
+.auto{
+	height: auto;
+	overflow: hidden;
+}
+.nav a.cur{
+	background:url(../images/navline.jpg) no-repeat left center;
+}
+.nav a{
+	margin-left: 60px;
+	padding-left: 17px;
+	font-size:14px;
+	color:#282828;
+}
+.nav a.color{
+	color:#df0031;
+}
+#content{
+	margin: 0 64px;
+}
+#content #menu{
+	height: 470px;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+	background-image: url(../images/b1.jpg);
+	background-size: 753px 365px;
+	background-repeat: no-repeat;
+	background-position: 456px 0px;
+}
+.left_menu{
+	position: absolute;
+	left: 200px;
+	top: 0;
+	background-color: #ABACAF;
+}
+.left_menu .item{
+	padding: 0 20px;
+	position: relative;
+}
+.select{
+	background-color: #78787B;
+}
+.left_menu .item a{
+	width: 200px;
+	height: 60px;
+	display: block;
+	color: white;
+	border-bottom: 1px solid rgba(255,255,255,.2);
+	line-height: 60px;
+	padding: 0 8px;
+}
+.left_menu .item a span{
+	font-size: 16px;
+}
+.left_menu .item a i{
+	width: 4px;
+	height: 14px;
+	position: absolute;
+	right: 34px;
+	text-align: right;
+}
+.sub_menu{
+	position: absolute;
+	left: 456px;
+	top: 0;
+	display: none;
+	width: 730px;
+	height: 345px;
+	border:gainsboro 1px solid;
+	padding: 10px;
+	background-size: 100%;
+}
+.sub_menu h3{
+	font-size: 16px;
+	color: red;
+	padding: 10px 0;
+}
+.sub_menu p{
+	padding: 5px 0;
+}
+.sub_menu a{
+	color: black;
+	white-space:nowrap;
+}
+.sub_menu a:hover{
+	color: red;
+}
+.map {
+	width: 1200px;
+	height: 700px;
+	margin-left: 100px;
+	background: url(../images/othersever_background.png);
+}
+.map_img {
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 1200px;
+}
+
+.map_h2 {
+	text-align: center;
+	margin-top: 15px;
+}
+.talk{
+	margin-top: 100px;
+	width: 1200px;
+	height: 1000px;
+    box-shadow: 0 0 0 1px #272832 inset!important;
+    margin-left: 100px;
+}
+}
+.item_class .item_class_intro{
+	width: 204px;
+	position: absolute;
+	top: 100px;
+	padding: 10px;
+	background-color: white;
+	transition: top .5s
+}
+.item_class .item_class_intro h3{
+	padding: 5px 0;
+}
+.item_class .item_class_intro h3 i{
+	margin-top: 2px;
+	margin-right: 4px;
+	padding: 2px;
+	font-style: normal;
+	font-size: 12px;
+	color: #fff;
+	line-height: 12px;
+	border-radius: 1px;
+	background-color: #93999f;
+}
+.item_class .item_class_intro p{
+	color: #93999f;
+	padding: 5px 0;
+	height: 35px;
+	line-height: 20px;
+	overflow: hidden;
+}
+.item_class .item_class_bottom{
+	width: 204px;
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	padding: 10px;
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+}
+.item_class_bottom .left{
+	float: left;
+	color: red;
+}
+.item_class_bottom .right{
+	float: right;
+}*/
+footer {
+	width: 100%;
+	height:70px;
+	background: #E0F2DA;
+	margin-top: 120px;
+}
+
+.footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footerleft {
+    float: left;
+}
+
+.footerleft a, .footerleft span {
+    float: left;
+    color: #282828;
+    line-height: 70px;
+}
+
+.footerleft span {
+    margin: 0 15px;
+}
+
+.footerright {
+    float: right;
+    font-size: 12px;
+    color: #282828;
+    line-height: 74px;
+}

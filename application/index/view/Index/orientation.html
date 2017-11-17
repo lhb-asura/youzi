@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>柚子职业定位</title>
+	<link rel="stylesheet" type="text/css" href="../css/index_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/position_style.css">
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<header>
+		<div class="header_main">
+		<div class="logo">
+			<img src="../images/logo_02.png">
+		</div>
+		<div class="right">
+	        <a class="button cur" data-toggle="modal" data-target="#myModal">登录</a>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div>
+						<form class="login_form">
+							<p class="headtext">柚子校园招聘<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><p>
+							<p><input class="input1  "type="text" name="user" placeholder="邮箱"></p>
+							<p><input class="input1" type="password" name="passwd" placeholder="密码"></p>
+							<p><button class="button1 btn " type="submit" >登录</button>
+								<button class="button1 btn "><a class="reg_a" href="register.html" class= target="_blank">立即注册</a></button></p>
+						</form>
+					</div>
+				</div>
+	        <a class="signup button" href="regist">注册</a>
+        </div>
+		<div class="nav auto">
+            <a href="/">首页</a>
+
+            <a href="orientation" class="cur">职业定位</a>
+            <a href="schoolpost">校招岗位</a>
+            <a href="person"  >人力共享中心</a>
+            <a href="service" >综合服务</a>
+        </div>
+        </div> 
+
+        </div>
+	</header>
+	<div class="main main1">
+        <div class="banner02">
+            <img src="../images/banner02.jpg">
+        </div>
+
+        <div class="main1_title">
+            <p class="title_p01">如果</p>
+            <p>人没有理想</p>
+            <p>一辈子只为了那点微薄的薪资过活，那么和咸鱼有什么<span>区别？</span></p>
+            <p class="title_p02">↓↓↓↓即刻启程↓↓↓</p>
+        </div>
+
+        <div class="video_first">
+           <video src="http://upofile.ruijie.com.cn/Campus/campus.mp4"  width="640" height="360" controls=""></video>
+        </div>
+
+		<div class="positiontitle">
+            <img src="../images/positiontitle.jpg">
+        </div>
+
+        <div class="main1_infro">
+            {volist name="hr_list" id="data"}
+            <div class="infro01">
+                <a href="">
+                    <img src="{$data.h_img_url}">
+                </a>
+                <div class="infro01_h2">
+                    <a href=""><h2>{$data.h_name} &nbsp {$data.h_level}</h2></a>
+                </div>
+                <div class="infro01_p">
+                    <p>{$data.h_introduction}</p>
+                </div>
+                <div class="cats">
+                    <img src="../images/people.png" alt=""> {$data.num}人参加
+                </div>
+            </div>
+            {/volist}
+            <!--
+           <div class="infro01">
+                <a href="">
+                    <img src="../images/infro01.jpg">
+                </a>
+                <div class="infro01_h2">
+                    <a href=""><h2>来自北京的HR高管的第一次指导，沉着稳重</h2></a>
+                </div>
+                <div class="infro01_p">
+                    <p>500强世界企业，10000+点对点辅导，拥有20年工作经验，10年指导经验，带你走向正确之路</p>
+                </div>
+                <div class="cats">
+                    <img src="../images/people.png" alt=""> 5000+ 人参会者
+                </div>
+            </div>
+            <div class="infro01">
+                <a href="">
+                    <img src="../images/infro01.jpg">
+                </a>
+                <div class="infro01_h2">
+                    <a href=""><h2>来自北京的HR高管的第一次指导，沉着稳重</h2></a>
+                </div>
+                <div class="infro01_p">
+                    <p>500强世界企业，10000+点对点辅导，拥有20年工作经验，10年指导经验，带你走向正确之路</p>
+                </div>
+                <div class="cats">
+                    <img src="../images/people.png" alt=""> 5000+ 人参会者
+                </div>
+            </div>
+            <div class="infro01">
+                <a href="">
+                    <img src="../images/infro01.jpg">
+                </a>
+                <div class="infro01_h2">
+                    <a href=""><h2>来自北京的HR高管的第一次指导，沉着稳重</h2></a>
+                </div>
+                <div class="infro01_p">
+                    <p>500强世界企业，10000+点对点辅导，拥有20年工作经验，10年指导经验，带你走向正确之路</p>
+                </div>
+                <div class="cats">
+                    <img src="../images/people.png" alt=""> 5000+ 人参会者
+                </div>
+            </div>
+
+
+
+        </div> -->
+
+        
+        <div class="more">
+            <a href="" class="button_more">
+                <img src="../images/search_f36.png">
+                查看更多
+            </a>
+        </div>
+
+	</div>
+
+    <footer>
+        <div class="footer auto">
+                <div class="footerleft auto">
+                    <a href="#">法律声明</a>
+                    <span>|</span>
+                    <a href="#">隐私保护</a>
+                    <span>|</span>
+                    <a href="#">联系我们</a>
+                    <span>|</span>
+                    <a href="#">网站地图</a>
+                </div>
+                <div class="footerright">版权所有©2017-2022 柚子人力资源有限公司</div>
+        </div>
+    </footer>
+</body>
+</html>

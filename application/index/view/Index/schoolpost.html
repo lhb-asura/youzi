@@ -17,21 +17,8 @@
 		<div class="logo">
 			<img src="../images/logo_02.png">
 		</div>
-		<div class="right">
-	        <a class="button cur" data-toggle="modal" data-target="#myModal">登录</a>
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div>
-						<form class="login_form">
-							<p class="headtext">柚子校园招聘<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><p>
-							<p><input class="input1  "type="text" name="user" placeholder="邮箱"></p>
-							<p><input class="input1" type="password" name="passwd" placeholder="密码"></p>
-							<p><button class="button1 btn " type="submit" >登录</button>
-								<button class="button1 btn "><a class="reg_a" href="register.html" class= target="_blank">立即注册</a></button></p>
-						</form>
-					</div>
-				</div>
-	        <a class="signup button" href="regist">注册</a>
-        </div>
+            {include file="tpl/login.tpl" /}
+
 		<div class="nav auto">
             <a href="/">首页</a>
 
@@ -142,271 +129,26 @@
             <!-- start -->
             <div class="intern-content-item">
 
+                {volist name="job_list" id="data"}
                 <div class="intern-content-href">
                     <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/41/C4/41375A0CE53577B00DB9433F22CC1FC4.jpg" alt="科锐国际实习招聘" class="intern-logo-img">
+                        <img src="{$data.c_icon_url}" alt="" class="intern-logo-img">
                     </a>
                     <div class="intern-title">
-                        <a href="" title="科锐-销售实习生" target="_blank">科锐-销售实习生</a>
+                        <a href="" title="" target="_blank">{$data.j_name}</a>
                     </div>
                     <div class="intern-sub">
-                        <a class="link" href="" target="_blank">科锐国际</a>
-                         - <span>人力资源 招聘 猎头服务</span>
+                        <a class="link" href="" target="_blank">{$data.c_name}</a>
+                          <span>{$data.j_description}</span>
                     </div>
                     <div class="intern-info">
-                        <span>4天/周</span><span>99-100/天</span>
-                        <span>上海</span>
+                        <span>{$data.j_arrange}</span><span>{$data.j_min_salary}-{$data.j_max_salary}/天</span>
+                        <span>{$data.j_location}</span>
                     </div>
                 </div>
+                {/volist}
 
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/41/C4/41375A0CE53577B00DB9433F22CC1FC4.jpg" alt="科锐国际实习招聘" class="intern-logo-img">
-                    </a>
-                    <div class="intern-title">
-                        <a href="/intern/inn_lpg4ynvhp3da" title="CK-人力资源实习生" target="_blank">CK-人力资源实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">科锐国际</a>
-                         - <span>人力资源 招聘 猎头服务</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>3天/周</span><span>150-160/天</span>
-                        <span>北京</span>
-                    </div>
-                </div>
 
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/76/4C/7656B4AEC0343BE450554E2E89C69C4C.jpg" alt="长江教育发展基金会实习招聘" class="intern-logo-img">
-                    </a>
-                    <div class="intern-title">
-                        <a href="/intern/inn_v8zxu6i1ceif" title="基金会实习生" target="_blank">基金会实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">长江教育发展基金会</a>
-                        <span>政府/公共事业</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>4天/周</span><span>100-180/天</span>
-                        <span>北京</span>
-                    </div>
-                </div>
-
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/company_logo/2015-21/SBj3ZhG2LglU1Re.jpg" alt="博雅公关实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="" title="Finance intern" target="_blank">Finance intern</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">博雅公关</a>
-                         - <span>咨询</span></div>
-                    <div class="intern-info">
-                        <span>4天/周</span><span>91-92/天</span>
-                        <span>上海</span>
-                    </div>
-                </div>
-
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/2F/5C/2F4150A636B91A3AC4BA52DC41E1E95C.png" alt="好未来实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="" title="python开发实习生" target="_blank">python开发实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">好未来</a>
-                         - <span>教育</span></div>
-                    <div class="intern-info">
-                        <span>5天/周</span><span>220-250/天</span>
-                        <span>全国</span>
-                    </div>
-                </div>
-
-                 <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/2F/5C/2F4150A636B91A3AC4BA52DC41E1E95C.png" alt="好未来实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="" title="python开发实习生" target="_blank">python开发实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">好未来</a>
-                         - <span>教育</span></div>
-                    <div class="intern-info">
-                        <span>5天/周</span><span>220-250/天</span>
-                        <span>全国</span>
-                    </div>
-                </div>
-
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/2F/5C/2F4150A636B91A3AC4BA52DC41E1E95C.png" alt="好未来实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="" title="python开发实习生" target="_blank">python开发实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">好未来</a>
-                         - <span>教育</span></div>
-                    <div class="intern-info">
-                        <span>5天/周</span><span>220-250/天</span>
-                        <span>全国</span>
-                    </div>
-                </div>
-
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/2F/5C/2F4150A636B91A3AC4BA52DC41E1E95C.png" alt="好未来实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="" title="python开发实习生" target="_blank">python开发实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">好未来</a>
-                         - <span>教育</span></div>
-                    <div class="intern-info">
-                        <span>5天/周</span><span>220-250/天</span>
-                        <span>全国</span>
-                    </div>
-                </div>
-
-                 <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/2F/5C/2F4150A636B91A3AC4BA52DC41E1E95C.png" alt="好未来实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="" title="python开发实习生" target="_blank">python开发实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">好未来</a>
-                         - <span>教育</span></div>
-                    <div class="intern-info">
-                        <span>5天/周</span><span>220-250/天</span>
-                        <span>全国</span>
-                    </div>
-                </div>
-
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/76/4C/7656B4AEC0343BE450554E2E89C69C4C.jpg" alt="长江教育发展基金会实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="/intern/inn_v8zxu6i1ceif" title="基金会实习生" target="_blank">基金会实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">长江教育发展基金会</a>
-                         - <span>政府/公共事业</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>4天/周</span><span>100-180/天</span>
-                        <span>北京</span>
-                    </div>
-                </div>
-
-               <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/76/4C/7656B4AEC0343BE450554E2E89C69C4C.jpg" alt="长江教育发展基金会实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="/intern/inn_v8zxu6i1ceif" title="基金会实习生" target="_blank">基金会实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">长江教育发展基金会</a>
-                         - <span>政府/公共事业</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>4天/周</span><span>100-180/天</span>
-                        <span>北京</span>
-                    </div>
-                </div>
-
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/76/4C/7656B4AEC0343BE450554E2E89C69C4C.jpg" alt="长江教育发展基金会实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="/intern/inn_v8zxu6i1ceif" title="基金会实习生" target="_blank">基金会实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">长江教育发展基金会</a>
-                         - <span>政府/公共事业</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>4天/周</span><span>100-180/天</span>
-                        <span>北京</span>
-                    </div>
-                </div>
-
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/76/4C/7656B4AEC0343BE450554E2E89C69C4C.jpg" alt="长江教育发展基金会实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="/intern/inn_v8zxu6i1ceif" title="基金会实习生" target="_blank">基金会实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">长江教育发展基金会</a>
-                         - <span>政府/公共事业</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>4天/周</span><span>100-180/天</span>
-                        <span>北京</span>
-                    </div>
-                </div>
-
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/76/4C/7656B4AEC0343BE450554E2E89C69C4C.jpg" alt="长江教育发展基金会实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="/intern/inn_v8zxu6i1ceif" title="基金会实习生" target="_blank">基金会实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">长江教育发展基金会</a>
-                         - <span>政府/公共事业</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>4天/周</span><span>100-180/天</span>
-                        <span>北京</span>
-                    </div>
-                </div>
-
-               <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/76/4C/7656B4AEC0343BE450554E2E89C69C4C.jpg" alt="长江教育发展基金会实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="/intern/inn_v8zxu6i1ceif" title="基金会实习生" target="_blank">基金会实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">长江教育发展基金会</a>
-                         - <span>政府/公共事业</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>4天/周</span><span>100-180/天</span>
-                        <span>北京</span>
-                    </div>
-                </div>
-
-               <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="http://www.sxsimg.com/76/4C/7656B4AEC0343BE450554E2E89C69C4C.jpg" alt="长江教育发展基金会实习招聘" class="intern-logo-img bgs">
-                    </a>
-                    <div class="intern-title">
-                        <a href="/intern/inn_v8zxu6i1ceif" title="基金会实习生" target="_blank">基金会实习生</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">长江教育发展基金会</a>
-                         - <span>政府/公共事业</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>4天/周</span><span>100-180/天</span>
-                        <span>北京</span>
-                    </div>
-                </div>
 
             </div>
             <!-- end -->

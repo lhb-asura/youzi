@@ -85,13 +85,14 @@ header {
 }
 .register_form{
 	float: left;
-	width: 30%;
+	width: 50%;
 	height: 550px;
-	margin-left: 35%;
+	margin-left: 25%;
 	margin-top: 50px;
 	padding-top: 100px;
 	position: absolute;
 	border-radius: 15px;
+
 	/*background:rgba(216,216,216,0.5);/*设置表单透明度*/
 	background-color: #FFFFFF;
 	text-align:center;
@@ -116,6 +117,10 @@ header {
 .input1{
 	width: 60%;
 	height: 30px;
+}
+.redAlert{
+	visibility:hidden;
+	color: red;
 }
 .button1{
 	text-align: center;

@@ -1,46 +1,197 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>注册</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../css/regist.css">
+    <title>注册</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/regist.css">
+
+
 </head>
 <body>
-	<header>
-		<div class="header_main">
-			<div class="logo">
-				<img src="../images/logo_02.png">
-			</div>
-			<div class="right">
-		        <p class="button cur">已有账号，去</p> 
-				<a class="loginhref" href="/">首页</a>
-	        </div>
+<header>
+    <div class="header_main">
+        <div class="logo">
+            <img src="../images/logo_02.png">
         </div>
-	</header>
-	<div>
-		<form class="register_form" action="check/reg" method="post">
-		<div style="margin-left:20%;margin-right:17%;width:63%;text-align:center;font-size:1.5em;background-color:#E0F2DA"><a >注册</a></div>
-			<p>用户名：&nbsp;&nbsp;&nbsp;&nbsp;<input class="input1" type="text" name="name" placeholder="请输入用户名"></p>
-			<p>邮箱：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="input1" type="text" name="email" placeholder="请输入邮箱"></p>
-			<p>手机号：&nbsp;&nbsp;&nbsp;&nbsp;<input class="input1" type="text" name="phone" placeholder="请输入手机号"></p>
-			<p>密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="input1" type="password" name="password" placeholder="请输入密码"></p>
-			<p>确认密码：  <input class="input1" type="password" name="confirmpassword" placeholder="确认密码"></p></p>
-				<p><button class="button1" type="submit" >确定</button></p>
-		</form>
+        <div class="right">
+            <p class="button cur">已有账号，去</p>
+            <a class="loginhref" href="/">首页</a>
+        </div>
     </div>
-		<footer>
-        <div class="footer auto">
-                <div class="footerleft auto">
-                    <a href="#">法律声明</a>
-                    <span>|</span>
-                    <a href="#">隐私保护</a>
-                    <span>|</span>
-                    <a href="#">联系我们</a>
-                    <span>|</span>
-                    <a href="#">网站地图</a>
-                </div>
-                <div class="footerright">版权所有©2017-2022 柚子人力资源有限公司</div>
+</header>
+<!-- -->
+<div>
+    <form action="check/reg" method="post" class="register_form" onsubmit="return validate_form(this);">
+        <div style="margin-left:12%;margin-right:17%;width:63%;text-align:center;font-size:1.5em;background-color:#E0F2DA">
+            <a>注册</a></div>
+        <p>
+            用户名：&nbsp;&nbsp;&nbsp;&nbsp;<input class="input1" type="text" name="name" placeholder="请输入用户名">
+            <span class="redAlert" id="nameAlert">用户名不能为空</span>
+        </p>
+        <p>
+            邮箱：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="input1" type="text" name="email" placeholder="请输入邮箱">
+            <span class="redAlert" name="请输入正确的邮箱格式" id="emailAlert">请输入正确的邮箱格式</span>
+        </p>
+        <p>
+            手机号：&nbsp;&nbsp;&nbsp;&nbsp;<input class="input1" type="text" name="phone"
+                                               placeholder="请输入手机号">
+            <span name="请输入11位手机号" class="redAlert" id="phoneAlert">
+					请输入11位手机号
+				</span>
+        </p>
+        <p>
+            密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="input1" type="password" name="password"
+                                                                      placeholder="请输入密码"/>
+            <span class="redAlert" id="passwordAlert">请输入六位数以上的密码</span>
+        </p>
+        <p>
+            确认密码： <input class="input1" type="password" name="confirmpassword" placeholder="确认密码"/>
+            <span class="redAlert" id="confirmPasswordAlert">输入的两次密码不一样哦~</span>
+        </p>
+        <p><input class="button1" value="确定" type="submit"></input></p>
+
+    </form>
+</div>
+<footer>
+    <div class="footer auto">
+        <div class="footerleft auto">
+            <a href="#">法律声明</a>
+            <span>|</span>
+            <a href="#">隐私保护</a>
+            <span>|</span>
+            <a href="#">联系我们</a>
+            <span>|</span>
+            <a href="#">网站地图</a>
         </div>
-    </footer>
+        <div class="footerright">版权所有©2017-2022 柚子人力资源有限公司</div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+    var xmlhttp = null;
+
+    function init_xmlhttp() {
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+    }
+
+    //ajax验证邮箱手机是否存在
+    function is_repeat(obj,tip) {
+        if (xmlhttp == null) {
+            init_xmlhttp();
+        }
+
+        xmlhttp.open('get', 'Check/' + obj.name + '_is_exist?' + obj.name + '=' + obj.value, false);
+        xmlhttp.send(null);
+        if (xmlhttp.responseText > 0) {
+            tip.innerHTML = '已存在';
+            tip.style.visibility='visible';
+            return true
+        }
+        else {
+            tip.innerHTML = tip.name;
+        }
+        return false;
+    }
+
+
+    function validate_name(field) {
+        if (field.value == "") {
+            document.getElementById("nameAlert").style.visibility = "visible";
+            //alert("000001");
+            return false;
+        }
+        else {
+
+            return true;
+        }
+    }//用户名空值验证
+    function validate_email(field) {
+        with (field) {
+            apos = value.indexOf("@")
+            dotpos = value.lastIndexOf(".")
+            if (apos < 1 || dotpos - apos < 2) {
+
+                document.getElementById("emailAlert").style.visibility = "visible";
+                //alert("aaa");
+
+                return false;
+            }
+            else {
+
+                return true;
+            }
+        }
+    }//邮件格式验证
+
+    function validate_phone(obj) {
+
+        if (isNaN(obj) == false || obj.value.length != 11) {
+            //alert('只能输入数字！');
+            document.getElementById("phoneAlert").style.visibility = "visible";
+            return false;
+        }
+        else {
+
+            return true;
+        }
+    }//手机号码格式验证
+
+    function validate_password(password) {
+        if (password.value.length < 6) {
+            //alert("密码必须大于六位");
+
+            document.getElementById("passwordAlert").style.visibility = "visible";
+
+            return false;
+        }
+        else {
+
+            return true;
+        }
+    }//密码长度验证
+    function validate_confirmpassword(password1, password2) {
+        if (password1.value != password2.value) {
+            //alert(password1.value);
+            //alert(password2.value);
+            document.getElementById("confirmPasswordAlert").style.visibility = "visible";
+            return false;
+        }
+        else {
+
+            return true;
+        }
+    }
+
+    //密码相同验证
+
+    function validate_form(thisform) {
+//        with (thisform) {
+//            is_repeat(email);
+//            return false;
+//        }
+//        return false;
+        document.getElementById("passwordAlert").style.visibility = "hidden";
+        document.getElementById("confirmPasswordAlert").style.visibility = "hidden";
+        var phonetip=document.getElementById("phoneAlert");
+        phonetip.style.visibility = "hidden";
+        var emailtip=document.getElementById("emailAlert");
+        emailtip.style.visibility= "hidden";
+        document.getElementById("nameAlert").style.visibility = "hidden";
+        with (thisform) {
+            return (validate_name(name) && validate_email(email) && validate_phone(phone) && validate_password(password)
+            && validate_confirmpassword(password, confirmpassword)&&!is_repeat(email,emailtip)&&!is_repeat(phone,phonetip));
+        }
+    }//执行以上验证函数
+
+</script>
 </body>
+
+
 </html>

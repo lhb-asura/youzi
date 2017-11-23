@@ -11,12 +11,17 @@
 use think\Route;
 
 Route::rule([
+    //index
     '/'=>'index/index',
     'person'=>'index/person',
     'regist'=>'index/regist',
     'orientation'=>'index/orientation',
     'schoolpost'=>'index/schoolpost',
     'service'=>'index/service',
+
+    //hr
+
+
 ],'','post|get');
 
 

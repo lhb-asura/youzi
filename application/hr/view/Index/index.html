@@ -68,7 +68,7 @@
                 </div>
                 <div class="dat02"> <span class="datti"><span>20</span> <br/>
           <span class="jan">jan</span></span> <span class="sqdeta"><img src="images/bs_04.jpg"> 您提交的请假申请未审批通过</span>
-                    <p class="linkbut"><a href="#">查看</a><a href="#">知道了</a></p>
+                    <p class="linkbut"><a  href="#">查看</a><a href="#">知道了</a></p>
                 </div>
             </div>
         </div>
@@ -85,15 +85,15 @@
                             <ul class="tabHead" id="tabCot_product-li-currentBtn-">
                                 <li class="currentBtn">
                                     <a href="javascript:void(0)" title="全部简历" rel="1">全部简历</a><span
-                                        class="grey_numb">12</span></li>
+                                        class="red_numb">{:count($emp_list)}</span></li>
                                 <li><a href="javascript:void(0)" title="未通过" rel="2">未通过</a><span
-                                        class="red_numb">2</span></li>
+                                        class="red_numb">{:count($unpre_list)}</span></li>
                                 <li><a href="javascript:void(0)" title="通过筛选" rel="3">通过筛选</a><span
-                                        class="red_numb">2</span></li>
+                                        class="red_numb">{:count($pre_list)}</span></li>
                                 <li><a href="javascript:void(0)" title="录用" rel="4">录用</a><span
-                                        class="red_numb">2</span></li>
+                                        class="red_numb">{:count($adopt_list)}</span></li>
                                 <li><a href="javascript:void(0)" title="未处理" rel="5">未处理</a><span
-                                        class="red_numb">5</span></li>
+                                        class="red_numb">{:count($unchecked_list)}</span></li>
                             </ul>
                             <p class="shent"><span>Show entries: </span>
                                 <input style="width:30px;" type="text" value="10">
@@ -103,32 +103,11 @@
                         <div id="tabCot_product_1" class="tabCot">
                             <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
 
-                                <tr>
-                                    <th width="10%" bgcolor="#f8f8f8" scope="col">
-                                        <div align="center">照片</div>
-                                    </th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">职位名称</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="22%" bgcolor="#f8f8f8" scope="col"><span class="titlab">投递时间</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">当前处理人</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="7%" bgcolor="#f8f8f8" scope="col"><span class="titlab">状态</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="19%" bgcolor="#f8f8f8" scope="col">操作</th>
-                                </tr>
+
+                                {include file="tpl/th.tpl"}
                                 {volist name="emp_list" id="data"}
-                                <tr>
-                                    <td bgcolor="#FFFFFF">
-                                        <div align="center"><img src="{$data.u_img_url}"></div>
-                                    </td>
-                                    <td class="datacol" bgcolor="#FFFFFF">{$data.j_name}</td>
-                                    <td bgcolor="#FFFFFF">{$data.e_time}</td>
-                                    <td bgcolor="#FFFFFF">{$data.ex_hr_name}</td>
-                                    <td class="yccol" bgcolor="#FFFFFF">{$data.adj}</td>
-                                    <td class="czcol" bgcolor="#FFFFFF"><select></select>&nbsp;&nbsp;&nbsp;<a href="#">查看</a>
-                                    </td>
-                                </tr>
+
+                                {include file="tpl/table.tpl"}
                                 {/volist}
 
                             </table>
@@ -149,96 +128,28 @@
 
                             <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
 
-                                <tr>
-                                    <th width="10%" bgcolor="#f8f8f8" scope="col">
-                                        <div align="center">照片</div>
-                                    </th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">职位名称</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="22%" bgcolor="#f8f8f8" scope="col"><span class="titlab">投递时间</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">当前处理人</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="7%" bgcolor="#f8f8f8" scope="col"><span class="titlab">状态</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="19%" bgcolor="#f8f8f8" scope="col">操作</th>
-                                </tr>
+
+                                {include file="tpl/th.tpl"}
                                 {volist name="unpre_list" id="data"}
-                                <tr>
-                                    <td bgcolor="#FFFFFF">
-                                        <div align="center"><img src="{$data.u_img_url}"></div>
-                                    </td>
-                                    <td class="datacol" bgcolor="#FFFFFF">{$data.j_name}</td>
-                                    <td bgcolor="#FFFFFF">{$data.e_time}</td>
-                                    <td bgcolor="#FFFFFF">{$data.ex_hr_name}</td>
-                                    <td class="yccol" bgcolor="#FFFFFF">{$data.adj}</td>
-                                    <td class="czcol" bgcolor="#FFFFFF"><select></select>&nbsp;&nbsp;&nbsp;<a href="#">查看</a>
-                                    </td>
-                                </tr>
+                                {include file="tpl/table.tpl"}
                                 {/volist}
                             </table>
                         </div>
                         <div id="tabCot_product_3" class="tabCot" style="display: none;">
                             <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
 
-                                <tr>
-                                    <th width="10%" bgcolor="#f8f8f8" scope="col">
-                                        <div align="center">照片</div>
-                                    </th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">职位名称</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="22%" bgcolor="#f8f8f8" scope="col"><span class="titlab">投递时间</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">当前处理人</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="7%" bgcolor="#f8f8f8" scope="col"><span class="titlab">状态</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="19%" bgcolor="#f8f8f8" scope="col">操作</th>
-                                </tr>
+                                {include file="tpl/th.tpl"}
                                 {volist name="pre_list" id="data"}
-                                <tr>
-                                    <td bgcolor="#FFFFFF">
-                                        <div align="center"><img src="{$data.u_img_url}"></div>
-                                    </td>
-                                    <td class="datacol" bgcolor="#FFFFFF">{$data.j_name}</td>
-                                    <td bgcolor="#FFFFFF">{$data.e_time}</td>
-                                    <td bgcolor="#FFFFFF">{$data.ex_hr_name}</td>
-                                    <td class="yccol" bgcolor="#FFFFFF">{$data.adj}</td>
-                                    <td class="czcol" bgcolor="#FFFFFF"><select></select>&nbsp;&nbsp;&nbsp;<a href="#">查看</a>
-                                    </td>
-                                </tr>
+                                {include file="tpl/table.tpl"}
                                 {/volist}
                             </table>
                         </div>
                         <div id="tabCot_product_4" class="tabCot" style="display: none;">
                             <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
 
-                                <tr>
-                                    <th width="10%" bgcolor="#f8f8f8" scope="col">
-                                        <div align="center">照片</div>
-                                    </th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">职位名称</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="22%" bgcolor="#f8f8f8" scope="col"><span class="titlab">投递时间</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">当前处理人</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="7%" bgcolor="#f8f8f8" scope="col"><span class="titlab">状态</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="19%" bgcolor="#f8f8f8" scope="col">操作</th>
-                                </tr>
+                                {include file="tpl/th.tpl"}
                                 {volist name="adopt_list" id="data"}
-                                <tr>
-                                    <td bgcolor="#FFFFFF">
-                                        <div align="center"><img src="{$data.u_img_url}"></div>
-                                    </td>
-                                    <td class="datacol" bgcolor="#FFFFFF">{$data.j_name}</td>
-                                    <td bgcolor="#FFFFFF">{$data.e_time}</td>
-                                    <td bgcolor="#FFFFFF">{$data.ex_hr_name}</td>
-                                    <td class="yccol" bgcolor="#FFFFFF">{$data.adj}</td>
-                                    <td class="czcol" bgcolor="#FFFFFF"><select></select>&nbsp;&nbsp;&nbsp;<a href="#">查看</a>
-                                    </td>
-                                </tr>
+                                {include file="tpl/table.tpl"}
                                 {/volist}
                             </table>
                         </div>
@@ -246,32 +157,9 @@
                         <div id="tabCot_product_5" class="tabCot" style="display: none;">
                             <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
 
-                                <tr>
-                                    <th width="10%" bgcolor="#f8f8f8" scope="col">
-                                        <div align="center">照片</div>
-                                    </th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">职位名称</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="22%" bgcolor="#f8f8f8" scope="col"><span class="titlab">投递时间</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">当前处理人</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="7%" bgcolor="#f8f8f8" scope="col"><span class="titlab">状态</span><span
-                                            class="xila">&or;</span></th>
-                                    <th width="19%" bgcolor="#f8f8f8" scope="col">操作</th>
-                                </tr>
+                                {include file="tpl/th.tpl"}
                                 {volist name="unchecked_list" id="data"}
-                                <tr>
-                                    <td bgcolor="#FFFFFF">
-                                        <div align="center"><img src="{$data.u_img_url}"></div>
-                                    </td>
-                                    <td class="datacol" bgcolor="#FFFFFF">{$data.j_name}</td>
-                                    <td bgcolor="#FFFFFF">{$data.e_time}</td>
-                                    <td bgcolor="#FFFFFF">{$data.ex_hr_name}</td>
-                                    <td class="yccol" bgcolor="#FFFFFF">{$data.adj}</td>
-                                    <td class="czcol" bgcolor="#FFFFFF"><select></select>&nbsp;&nbsp;&nbsp;<a href="#">查看</a>
-                                    </td>
-                                </tr>
+                                {include file="tpl/table.tpl"}
                                 {/volist}
                             </table>
                         </div>
@@ -285,4 +173,58 @@
 </div>
 <div class="footer"></div>
 </body>
+<script>
+
+    var xmlhttp = null;
+
+    function init_xmlhttp() {
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+    }
+
+function change_status(el,e_id,email,token) {
+
+       ;
+    if (xmlhttp == null) {
+        init_xmlhttp();
+    }
+
+    var c=confirm("确定修改审核状态吗？");
+    if(c)
+    {
+        var status=el[el.selectedIndex].value;
+        var form=new FormData();
+        form.append('status',status);
+        form.append('e_id',e_id);
+        form.append('email',email);
+        form.append('token',token)
+        xmlhttp.open('post','/hr.php/changestatus',false);
+        xmlhttp.send(form);
+
+        if(xmlhttp.responseText>0)
+        {
+            console.log('修改成功');
+            location.reload(true);
+        }
+        else {
+            console.log('修改失败');
+        }
+    }
+    else
+    {
+    //    alert(el.previousNode().innerHTML);
+        el[el.name].selected=true;
+    }
+
+}
+function  hello() {
+
+        alert('ssdd');
+}
+</script>
 </html>

@@ -29,7 +29,7 @@
         <?php } ?>
         <p class="detail"></p>
         <p class="jump">
-            注册成功正在前往 <a id="href" href="<?php echo($url);?>">首页</a> 等待时间： <b id="wait"><?php echo($wait);?></b>
+            操作成功正在前往 <a id="href" href="<?php echo($url);?>">页面</a> 等待时间： <b id="wait"><?php echo($wait);?></b>
         </p>
     </div>
     <script type="text/javascript">

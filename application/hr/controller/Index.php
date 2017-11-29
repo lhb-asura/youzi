@@ -8,8 +8,8 @@
  */
 namespace app\hr\controller;
 
+use app\common\model\Employment;
 use app\common\model\Hr;
-use app\hr\model\CorHr;
 use app\hr\model\ExamCandidate;
 use think\Controller;
 use think\Session;
@@ -30,6 +30,7 @@ class Index extends Controller
                 $pre_list=$exam->getPrelist($c_id);
                 $unpre_list = $exam->getUnPrelist($c_id);
 
+         //       dump($emp_list);
                 $this->assign('emp_list', $emp_list);
                 $this->assign('unpre_list', $unpre_list);
                 $this->assign('pre_list', $pre_list);
@@ -43,6 +44,22 @@ class Index extends Controller
             return 'illigal privilege';
         } else {
             return $this->fetch("login");
+        }
+    }
+
+    public  function changeStatus()
+    {
+        //echo 'fadf';
+        $email=input('email');
+        $token=input('token');
+        $status=input('status');
+        $e_id=input('e_id');
+        if (Hr::getPrivilege($email, $token))
+        {
+            $employment=Employment::get($e_id);
+            $employment->status=$status;
+            $employment->ex_hr_id=session('hr')['id'];
+            echo $employment->save();
         }
     }
 

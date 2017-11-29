@@ -17,7 +17,7 @@ class Check extends Controller
         $passwd = md5(input('password'));
         $email = input('email');
         $hr = Db::table('cor_hr')
-           -> field('h_level,h_name as name,h_email as email,h_img_url,c_id,c_name')
+           -> field('h_id as id,h_level,h_name as name,h_email as email,h_img_url,c_id,c_name')
             ->where('h_passwd','=', $passwd)
             ->where('h_email', '=',$email)
         ->find();

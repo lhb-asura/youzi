@@ -5,6 +5,7 @@
 	<title>柚子校招岗位</title>
 	<link rel="stylesheet" type="text/css" href="../css/index_style.css">
     <link rel="stylesheet" href="../css/work_style.css">
+    <link rel="stylesheet" href="../css/applicant_style.css">
 		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -128,27 +129,11 @@
             </div>
             <!-- start -->
             <div class="intern-content-item">
-
-                {volist name="job_list" id="data"}
-                <div class="intern-content-href">
-                    <a target="_blank" class="intern-logo" href="">
-                        <img src="{$data.c_icon_url}" alt="" class="intern-logo-img">
-                    </a>
-                    <div class="intern-title">
-                        <a href="" title="" target="_blank">{$data.j_name}</a>
-                    </div>
-                    <div class="intern-sub">
-                        <a class="link" href="" target="_blank">{$data.c_name}</a>
-                          <span>{$data.j_description}</span>
-                    </div>
-                    <div class="intern-info">
-                        <span>{$data.j_arrange}</span><span>{$data.j_min_salary}-{$data.j_max_salary}/天</span>
-                        <span>{$data.j_location}</span>
-                    </div>
-                </div>
-                {/volist}
-
-
+                {if session('?user')}
+                {include file="tpl/job_login_list.tpl" /}
+                {else/}
+                {include file="tpl/job_nologin_list.tpl" /}
+                {/if}
 
             </div>
             <!-- end -->
@@ -162,6 +147,7 @@
         </div>
 		
 	</div>
+    {include file="tpl/upload_resume.tpl" /}
 
     <footer>
         <div class="footer auto">

@@ -36,7 +36,7 @@ class ExamCandidate extends Model
      */
     public  function  getUnPrelist($c_id)
     {
-        return $this->getEmploylist($c_id, -1);
+        return $this->getEmploylist($c_id, 3);
     }
     /*
      * 已查看

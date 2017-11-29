@@ -176,17 +176,19 @@
 //            is_repeat(email);
 //            return false;
 //        }
-//        return false;
+      //  return false;
         document.getElementById("passwordAlert").style.visibility = "hidden";
         document.getElementById("confirmPasswordAlert").style.visibility = "hidden";
         var phonetip=document.getElementById("phoneAlert");
         phonetip.style.visibility = "hidden";
         var emailtip=document.getElementById("emailAlert");
         emailtip.style.visibility= "hidden";
-        document.getElementById("nameAlert").style.visibility = "hidden";
+        var nametip=document.getElementById("nameAlert");
+        nametip.style.visibility = "hidden";
         with (thisform) {
+           // return false;
             return (validate_name(name) && validate_email(email) && validate_phone(phone) && validate_password(password)
-            && validate_confirmpassword(password, confirmpassword)&&!is_repeat(email,emailtip)&&!is_repeat(phone,phonetip));
+            && validate_confirmpassword(password, confirmpassword)&&!is_repeat(name,nametip)&&!is_repeat(email,emailtip)&&!is_repeat(phone,phonetip));
         }
     }//执行以上验证函数
 

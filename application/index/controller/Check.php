@@ -56,16 +56,21 @@ class Check extends Controller
     public function phone_is_exist()
     {
         $phone = input('phone');
-        $phone_count = Db::table('user')->where('u_phone', 'phone')->find();
+        $phone_count = Db::table('user')->where('u_phone', 'phone')->count();
         echo $phone_count;
     }
-
+    public function name_is_exist()
+    {
+        $name=input('name');
+        $name_count = Db::table('user')->where('u_name', $name)->count();
+        return $name_count;
+    }
     public function login()
     {
         $passwd = md5(input('password'));
         $email = input('email');
         $user = Db::table('user')->
-        field('u_name as name,u_email as email,u_phone as phone')
+        field('u_id as id ,u_name as name,u_email as email,u_phone as phone')
             ->where('u_passwd', $passwd)->where('u_email', $email)->find();
 
         if ($user) {

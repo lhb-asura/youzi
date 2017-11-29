@@ -18,8 +18,10 @@ Route::rule([
     'orientation'=>'index/orientation',
     'schoolpost'=>'index/schoolpost',
     'service'=>'index/service',
-
+    'getstatus'=>'index/getstatus',
     //hr
+
+    'changestatus'=>'index/changestatus'
 
 
 ],'','post|get');

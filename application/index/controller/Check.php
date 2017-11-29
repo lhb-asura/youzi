@@ -32,10 +32,11 @@ class Check extends Controller
             'u_passwd' => $passwd,
             'u_token' => $token
         ];
-        Db::table('user')->insert($data);
-
+        $user=new User($data);
+        $user->save();
         Session::set('user',
             [
+                'id'=>$user->u_id,
                 'name' => $name,
                 'email' => $email,
                 'phone' => $phone,

@@ -1,5 +1,4 @@
 .main02 {
-	height: 1500px;
 }
 
 .main_list {
@@ -116,7 +115,6 @@
 
 .main_work {
 	width: 100%;
-	height: 960px;
 	margin-top: 40px;
 }
 
@@ -154,7 +152,7 @@
 .intern-content-href {
     float: left;
     height: 110px;
-    width: 539px;
+    width: 50%;
     border-bottom: dashed 1px #eaeaea;
     border-right: dashed 1px #eaeaea;
     padding-right: 30px;

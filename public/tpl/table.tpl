@@ -1,7 +1,9 @@
 <tr>
+
+    <!--
     <td bgcolor="#FFFFFF">
         <div align="center"><img src="{$data.u_img_url}"></div>
-    </td>
+    </td>-->
     <td class="datacol" bgcolor="#FFFFFF">{$data.j_name}</td>
     <td bgcolor="#FFFFFF">{$data.e_time}</td>
     <td bgcolor="#FFFFFF">{$data.ex_hr_name}</td>

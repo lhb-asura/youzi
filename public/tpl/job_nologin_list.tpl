@@ -13,7 +13,7 @@
         <a class="link" href="" target="_blank">{$data.c_name}</a>
         <span>{$data.j_description}</span>
     </div>
-    <div class="intern-info">
+    <div class="intern-info" >
         <span>{$data.j_arrange}</span><span>{$data.j_min_salary}-{$data.j_max_salary}/天</span>
         <span>{$data.j_location}</span>
     </div>

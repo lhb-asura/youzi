@@ -73,7 +73,6 @@ header {
 }
 
 .auto {
-    height: auto;
     overflow: hidden;
 }
 
@@ -91,7 +90,6 @@ header {
 
 .main {
 	max-width: 1200px;
-	height:2400px;
 	margin:0 auto;
 	/*border:1px solid #282828;*/
 }
@@ -211,7 +209,7 @@ header {
 	display: block;
 	float:left;
 	text-align: center;
-} 
+}
 
 .people li img {
 	border-radius: 100px;
@@ -242,7 +240,7 @@ header {
 	max-width: 1000px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top: 60px;
+	margin-top: 160px;
 }
 
 .person_main img {
@@ -273,7 +271,7 @@ header {
 .person_person {
 	width: 1000px;
 	height: 200px;
-		
+
 }
 
 footer {

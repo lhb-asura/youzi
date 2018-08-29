@@ -23,7 +23,6 @@ class ExamCandidate extends Model
     {
         return $this->getEmploylist($c_id,2);
     }
-
     /*
      * 获取通过筛选
      */
